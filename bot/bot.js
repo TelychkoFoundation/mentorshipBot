@@ -6,7 +6,7 @@ const bot = new Telegraf(process.env.BOT_TOKEN);
 
 bot.start(async (ctx) => {
     await connectToDB();
-    await bot.telegram.setWebhook('https://mentorship-bot.vercel.app/api/telegram');
+    // await bot.telegram.setWebhook('https://mentorship-bot.vercel.app/api/telegram');
 
     const { id, username } = ctx.from;
 
