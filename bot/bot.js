@@ -4,10 +4,9 @@ import User from "../models/User.js";
 
 const bot = new Telegraf(process.env.BOT_TOKEN);
 
-await bot.telegram.setWebhook('https://mentorship-bot.vercel.app/api/telegram');
-
 bot.start(async (ctx) => {
     await connectToDB();
+    await bot.telegram.setWebhook('https://mentorship-bot.vercel.app/api/telegram');
 
     const { id, username } = ctx.from;
 
