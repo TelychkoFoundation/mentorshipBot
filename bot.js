@@ -1,6 +1,6 @@
 import { Telegraf } from 'telegraf';
-import { connectToDB } from '../lib/db.js';
-import User from "../models/User.js";
+import { connectToDB } from './lib/db.js';
+import User from "./models/User.js";
 import dotenv from 'dotenv';
 
 dotenv.config();

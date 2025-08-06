@@ -1,9 +1,9 @@
 {
   "version": 2,
-  "builds": [
-    { "src": "api/telegram.js", "use": "@vercel/node" }
-  ],
-  "routes": [
-    { "src": "/api/telegram", "dest": "api/telegram.js" }
-  ]
+  "functions": {
+    "api/telegram.js": {
+      "memory": 1024,
+      "maxDuration": 10
+    }
+  }
 }

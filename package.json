@@ -4,8 +4,8 @@
   "type": "module",
   "main": "api/telegram.js",
   "scripts": {
-    "start": "node bot/bot.js",
-    "dev": "nodemon bot/bot.js"
+    "start": "node api/telegram.js",
+    "dev": "nodemon api/telegram.js"
   },
   "keywords": [],
   "author": "",
