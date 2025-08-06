@@ -9,7 +9,7 @@ bot.start(async (ctx) => {
 
     const { id, username } = ctx.from;
 
-    let user = await User.findOne({ telegramId: id });
+    let user = await User.findOne({ id });
     if (!user) {
         // Якщо юзери створюються окремо, просто повідом про помилку
         await ctx.reply("❗️Користувача не знайдено. Звернись до адміністратора.");
