@@ -11,15 +11,8 @@ bot.start(async (ctx) => {
 
     let user = await User.findOne({ telegramId: id });
     if (!user) {
-        user = await User.create({
-            telegramId: id,
-            username,
-            mentorship: {
-                expiresAt: null,
-                questionsLeft: 0
-            }
-        });
-        await ctx.reply(`👋 Привіт, ${username}! Тебе додано.`);
+        // Якщо юзери створюються окремо, просто повідом про помилку
+        await ctx.reply("❗️Користувача не знайдено. Звернись до адміністратора.");
     } else {
         await ctx.reply(`👋 Знову привіт, ${username}!`);
     }
