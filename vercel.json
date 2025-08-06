@@ -5,5 +5,5 @@
   ],
   "routes": [
     { "src": "/api/telegram", "dest": "api/telegram.js" }
-  ],
+  ]
 }
