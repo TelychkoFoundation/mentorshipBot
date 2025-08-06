@@ -1,6 +1,6 @@
 import { Telegraf } from 'telegraf';
 import { connectToDB } from '../lib/db.js';
-import { User } from "../models/User";
+import User from "../models/User.js";
 
 const bot = new Telegraf(process.env.BOT_TOKEN);
 
