@@ -7,6 +7,12 @@ dotenv.config();
 
 const bot = new Telegraf(process.env.BOT_TOKEN);
 
+bot.launch({
+    webhook: {
+        domain: "https://mentorship-bot.vercel.app/api/telegram", // Replace with your domain
+    },
+});
+
 // реєструємо хендлери тут, бо Vercel кожен раз викликає цю функцію окремо
 bot.start(async (ctx) => {
     console.log('🚀 /start команда прийнята:', ctx.from);
