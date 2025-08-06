@@ -7,7 +7,14 @@ dotenv.config();
 
 const bot = new Telegraf(process.env.BOT_TOKEN);
 
-await bot.telegram.setWebhook('https://mentorship-bot.vercel.app/api/telegram');
+(async () => {
+    try {
+        const res = await bot.telegram.setWebhook('https://mentorship-bot.vercel.app/api/telegram');
+        console.log('✅ Webhook встановлено:', res);
+    } catch (err) {
+        console.error('❌ Помилка встановлення вебхука:', err);
+    }
+})();
 
 bot.start(async (ctx) => {
     console.log('🚀 /start команда прийнята:', ctx.from);
