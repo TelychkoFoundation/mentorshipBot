@@ -5,13 +5,12 @@ import dotenv from 'dotenv';
 
 dotenv.config();
 
-console.log('BOT TOKEN:', process.env.BOT_TOKEN);
-
 const bot = new Telegraf(process.env.BOT_TOKEN);
 
 await bot.telegram.setWebhook('https://mentorship-bot.vercel.app/api/telegram');
 
 bot.start(async (ctx) => {
+    console.log('🚀 /start команда прийнята:', ctx.from);
     await connectToDB();
 
     const { id, username } = ctx.from;
