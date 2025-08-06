@@ -6,9 +6,4 @@
   "routes": [
     { "src": "/api/telegram", "dest": "api/telegram.js" }
   ],
-  "functions": {
-    "api/telegram.js": {
-      "runtime": "nodejs18.x"
-    }
-  }
 }
